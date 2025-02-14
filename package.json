@@ -11,9 +11,14 @@
     "clear": "yarn cmd clean"
   },
   "dependencies": {
+    "ajv": "^8.8.2",
+    "ajv-formats": "^3.0.1",
+    "ajv-keywords": "^5.1.0",
     "cross-env": "7.0.3",
     "del": "6.1.1",
-    "sass": "1.69.5"
+    "json-schema-traverse": "0.4.1",
+    "sass": "1.69.5",
+    "schema-utils": "^4.3.0"
   },
   "devDependencies": {
     "@babel/cli": "7.24.1",
