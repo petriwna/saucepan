@@ -185,7 +185,7 @@ module.exports = {
     !isDevMode && new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
-        // { from: resolveSrc('public/images'), to: 'public/images' },
+        { from: resolveSrc('public/images'), to: 'public/images' },
         { from: resolveSrc('public/favicon'), to: 'public/favicon' },
         // { from: resolveSrc('public/videos'), to: 'public/videos' },
       ],
