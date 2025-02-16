@@ -12,6 +12,7 @@
     "clear": "yarn cmd clean"
   },
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "ajv": "^8.8.2",
     "ajv-formats": "^3.0.1",
     "ajv-keywords": "^5.1.0",
@@ -19,7 +20,8 @@
     "del": "6.1.1",
     "json-schema-traverse": "0.4.1",
     "sass": "1.69.5",
-    "schema-utils": "^4.3.0"
+    "schema-utils": "^4.3.0",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@babel/cli": "7.24.1",

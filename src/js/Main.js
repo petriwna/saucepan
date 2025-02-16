@@ -1,4 +1,5 @@
 import { Form } from './Form';
+import { ReviewsComponent } from './ReviewsComponent';
 
 export class Main {
   constructor() {
@@ -7,6 +8,7 @@ export class Main {
 
   init() {
     this.initForm();
+    new ReviewsComponent();
   }
 
   initForm() {
