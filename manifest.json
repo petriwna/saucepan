@@ -1,4 +1,5 @@
 {
+  "main.css": "auto/main.css",
   "main.js": "auto/bundle.js",
   "public/images/hero.jpg": "auto/public/images/hero.jpg",
   "public/favicon/apple-touch-icon.png": "auto/public/favicon/apple-touch-icon.png",
@@ -12,6 +13,5 @@
   "public/favicon/favicon-16x16.png": "auto/public/favicon/favicon-16x16.png",
   "public/favicon/site.webmanifest": "auto/public/favicon/site.webmanifest",
   "public/favicon/browserconfig.xml": "auto/public/favicon/browserconfig.xml",
-  "bundle.js.map": "auto/bundle.js.map",
-  "main.hot-update.js.map": "auto/main.f3f820f407d63cb07951.hot-update.js.map"
+  "main.css.map": "auto/main.css.map"
 }
