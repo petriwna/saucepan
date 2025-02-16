@@ -1,6 +1,6 @@
 {
   "main.css": "auto/main.css",
-  "main.js": "auto/main-89cb9a05.js",
+  "main.js": "auto/main-f3a4d228.js",
   "public/images/hero-2.jpg": "auto/public/images/hero-2.jpg",
   "public/images/hero.jpg": "auto/public/images/hero.jpg",
   "public/images/sending.png": "auto/public/images/sending.png",
@@ -22,5 +22,5 @@
   "public/favicon/browserconfig.xml": "auto/public/favicon/browserconfig.xml",
   "public/images/separator.png": "auto/public/images/separator.png",
   "main.css.map": "auto/main.css.map",
-  "main-89cb9a05.js.map": "auto/main-89cb9a05.js.map"
+  "main-f3a4d228.js.map": "auto/main-f3a4d228.js.map"
 }
