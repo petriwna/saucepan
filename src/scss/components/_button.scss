@@ -1,0 +1,18 @@
+.button {
+  border-radius: 8px;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  background-color: var(--color-brand-normal);
+  border: 2px solid var(--color-brand-normal);
+  margin: 0 auto 16px;
+
+  &:hover {
+    background: transparent;
+    color: var(--color-brand-dark);
+  }
+}

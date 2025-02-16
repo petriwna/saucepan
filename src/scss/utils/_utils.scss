@@ -1,0 +1,16 @@
+.error {
+  height: 30px;
+  color: var(--error);
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+

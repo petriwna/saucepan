@@ -204,7 +204,57 @@
       </div>
     </section>
     <section class="request">
+      <div class='request__container'>
+        <div class='request__text'>
+          <h2 class='request__title'>Залишіть заявку</h2>
+          <p class='request__paragraph'>Заповніть форму, щоб ми могли з вами зв'язатися!</p>
+        </div>
+        <form name='request-form' autocomplete='off' class='request__form'>
+        <p class='error'></p>
+          <div class='request__form-field visually-hidden'>
+            <label for='request-ware'>Товар</label>
+            <input
+              class='ware'
+              id='request-ware'
+              type='text'
+              name='request-ware'
+              placeholder='Товар'
+              value="Утятниця (гусятниця) 5 л з кришкою - сковородою Сітон"
+              required
+            />
+          </div>
 
+          <div class='request__form-field input'>
+          <label class='input__label visually-hidden' for='request-name'
+          >Ім’я</label
+          >
+          <input
+            class='input__control name'
+            id='request-name'
+            type='text'
+            name='request-name'
+            placeholder='Ім’я'
+            required
+          />
+        </div>
+        <div class='request__form-field input'>
+          <label class='input__label visually-hidden' for='request-tel'
+          >Телефон</label
+          >
+          <input
+            class='input__control phone'
+            id='request-tel'
+            name='request-tel'
+            type='tel'
+            placeholder='Телефон'
+            required
+          />
+        </div>
+        <button class='request__button button' type='submit' value='Замовити дзвінок'
+        >Замовити дзвінок
+        </button>
+      </form>
+      </div>
     </section>
     <section class="delivery">
 
