@@ -1,6 +1,6 @@
 {
   "main.css": "auto/main.css",
-  "main.js": "auto/bundle.js",
+  "main.js": "auto/main-6d645151.js",
   "public/images/hero.jpg": "auto/public/images/hero.jpg",
   "public/images/size-saucepan.png": "auto/public/images/size-saucepan.png",
   "public/favicon/apple-touch-icon.png": "auto/public/favicon/apple-touch-icon.png",
@@ -16,5 +16,5 @@
   "public/favicon/site.webmanifest": "auto/public/favicon/site.webmanifest",
   "public/favicon/browserconfig.xml": "auto/public/favicon/browserconfig.xml",
   "main.css.map": "auto/main.css.map",
-  "bundle.js.map": "auto/bundle.js.map"
+  "main-6d645151.js.map": "auto/main-6d645151.js.map"
 }
