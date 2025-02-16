@@ -15,5 +15,6 @@
   "public/favicon/favicon-16x16.png": "auto/public/favicon/favicon-16x16.png",
   "public/favicon/site.webmanifest": "auto/public/favicon/site.webmanifest",
   "public/favicon/browserconfig.xml": "auto/public/favicon/browserconfig.xml",
-  "main.css.map": "auto/main.css.map"
+  "main.css.map": "auto/main.css.map",
+  "bundle.js.map": "auto/bundle.js.map"
 }
