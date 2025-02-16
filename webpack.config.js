@@ -77,11 +77,10 @@ module.exports = {
   mode: isDevMode ? 'development' : 'production',
   entry: {
     main: resolve('js', 'index.js'),
-    // 'privacy-policy': resolve('js', 'privacy-policy.js'),
   },
   output: {
     path: path.resolve(process.cwd(), 'dist'),
-    filename: 'bundle.js',
+    filename: '[name]-[hash:8].js',
   },
   resolve: {
     extensions: ['.js'],
@@ -187,23 +186,14 @@ module.exports = {
       patterns: [
         { from: resolveSrc('public/images'), to: 'public/images' },
         { from: resolveSrc('public/favicon'), to: 'public/favicon' },
-        // { from: resolveSrc('public/videos'), to: 'public/videos' },
       ],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      chunks: ['main'],
       minify: true,
       inject: 'body',
     }),
-    // new HtmlWebpackPlugin({
-    //   template: './src/privacy-policy.html',
-    //   filename: 'privacy-policy.html',
-    //   chunks: ['privacy-policy'],
-    //   minify: true,
-    //   inject: 'body',
-    // }),
     new WebpackManifestPlugin(),
   ].filter(Boolean),
   devtool: 'source-map',
