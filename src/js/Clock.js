@@ -1,3 +1,6 @@
+import { AlertRenderer } from './AlertRenderer';
+import { sendError } from './utils';
+
 export class Clock {
   constructor() {
     this.clock = document.querySelector('.clock');
@@ -73,5 +76,26 @@ export class Clock {
 
     this.startPromotion = newStartDate.toLocaleDateString();
     this.endPromotion = newEndDate.toLocaleDateString();
+
+    const text = `Оновлення дати акції з ${this.startPromotion} до ${this.endPromotion}`;
+    this.sendMessageTelegram(text);
+  }
+
+  async sendMessageTelegram(text) {
+    const response = await fetch(process.env.API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        chat_id: process.env.TELEGRAM_CHAT_ID,
+        text,
+        disable_notification: true,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
   }
 }
