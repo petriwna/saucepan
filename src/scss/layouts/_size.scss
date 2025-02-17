@@ -8,6 +8,15 @@
     line-height: 32px;
     text-align: center;
     text-transform: uppercase;
+
+    &::after{
+      display: block;
+      content: "";
+      width: 62px;
+      height: 5px;
+      margin: 15px auto;
+      background: url("../../public/images/separator.png") center center no-repeat;
+    }
   }
 
   &__item {
