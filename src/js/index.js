@@ -1,5 +1,6 @@
 import '../scss/style.scss';
 
+import { getAnalytics } from 'firebase/analytics';
 import { initializeApp } from 'firebase/app';
 
 import { Main } from './Main';
@@ -17,6 +18,7 @@ export function init() {
   };
 
   const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 }
 
 document.addEventListener('DOMContentLoaded', init);

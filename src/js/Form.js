@@ -10,6 +10,10 @@ export class Form {
     this.btnSubmit = this.form.querySelector('button');
     this.error = this.form.querySelector('.error');
 
+    this.wareInput = this.form.querySelector('.ware');
+    this.wareInput.value = this.wareInput.value
+      ? this.wareInput.value
+      : 'Утятниця (гусятниця) 5 л з кришкою - сковородою Сітон';
     this.setupEventListeners();
   }
 
@@ -29,30 +33,34 @@ export class Form {
 
   handleInputTel(input) {
     input.value = this.formatPhoneNumber(input.value);
-
-    this.moveCursor(input);
-  }
-
-  moveCursor(input) {
-    const cursorPosition = input.selectionStart;
-    input.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
   }
 
   formatPhoneNumber(phoneNumber) {
     const cleaned = phoneNumber.replace(/\D/g, '');
-    const match = cleaned.match(/^(\d{0,2})?(\d{0,3})?(\d{0,2})?(\d{0,2})?(\d{0,3})?/);
-    return [
-      match[1] ? '+' : '',
-      match[1],
-      match[2] ? ' ' : '',
-      match[2],
-      match[3] ? ' ' : '',
-      match[3],
-      match[4] ? ' ' : '',
-      match[4],
-      match[5] ? ' ' : '',
-      match[5],
-    ].join('');
+
+    if (cleaned.startsWith('0')) {
+      const match = cleaned.match(/^(\d{0,3})?(\d{0,3})?(\d{0,2})?(\d{0,2})?/);
+      return [
+        match[1],
+        match[2] && match[1] ? ' ' : '',
+        match[2],
+        match[3] && match[2] ? ' ' : '',
+        match[3],
+        match[4] && match[3] ? ' ' : '',
+        match[4],
+      ].join('');
+    } else if (cleaned.startsWith('380')) {
+      const match = cleaned.match(/^380(\d{0,2})?(\d{0,3})?(\d{0,2})?(\d{0,2})?/);
+      return [
+        '+380',
+        match[1] ? ` ${match[1]}` : '',
+        match[2] ? ` ${match[2]}` : '',
+        match[3] ? ` ${match[3]}` : '',
+        match[4] ? ` ${match[4]}` : '',
+      ].join('');
+    }
+
+    return phoneNumber;
   }
 
   handleSubmit(event) {
@@ -116,11 +124,6 @@ export class Form {
       } else if (input.classList.contains('phone')) {
         if (!InputValidator.isPhoneNumber(input.value)) {
           this.handleInputError(input, 'Будь ласка введіть дійсний номер телефону!');
-          isError = true;
-        }
-      } else if (input.classList.contains('first-name')) {
-        if (!InputValidator.isNameValid(input.value)) {
-          this.handleInputError(input, 'Введіть коректне призвіще!');
           isError = true;
         }
       } else if (input.classList.contains('name')) {

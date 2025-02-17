@@ -9,7 +9,8 @@
     "build:dev": "cross-env NODE_ENV=development webpack",
     "build:analyze": "cross-env NODE_ENV=production webpack --analyze",
     "deploy": "gh-pages -d dist",
-    "clear": "yarn cmd clean"
+    "clear": "yarn cmd clean",
+    "deploy:firebase": "firebase deploy"
   },
   "dependencies": {
     "cross-env": "7.0.3",
