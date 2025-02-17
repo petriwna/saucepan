@@ -1,5 +1,3 @@
-import { getNodeValue } from './utils';
-
 export class Clock {
   constructor() {
     this.clock = document.querySelector('.clock');
@@ -9,28 +7,54 @@ export class Clock {
     this.minutesLeft = this.clock.querySelector('#minutes');
     this.secondsLeft = this.clock.querySelector('#seconds');
 
-    this.startPromotion = getNodeValue('js-date-start');
-    this.endPromotion = getNodeValue('js-date-end');
+    this.startPromotionElement = document.querySelector('#js-date-start');
+    this.endPromotionElement = document.querySelector('#js-date-end');
+
+    this.startPromotion = '';
+    this.endPromotion = '';
 
     this.init();
   }
 
   init() {
+    this.setPromoDate();
+
     setInterval(this.updateCountdown.bind(this), 1000);
     this.updateCountdown();
   }
 
+  setPromoDate() {
+    if (this.startPromotionElement.textContent === '' || this.endPromotionElement.textContent === '') {
+      const currentDate = new Date();
+      const startDate = new Date(currentDate.getTime() - 2 * 24 * 60 * 60 * 1000);
+      this.startPromotionElement.textContent = startDate.toLocaleDateString();
+      this.startPromotion = startDate.toLocaleDateString();
+
+      const endDate = new Date(startDate.getTime() + 14 * 24 * 60 * 60 * 1000);
+      this.endPromotionElement.textContent = endDate.toLocaleDateString();
+      this.endPromotion = endDate.toLocaleDateString();
+    } else {
+      this.startPromotion = this.startPromotionElement.textContent;
+      this.endPromotion = this.endPromotionElement.textContent;
+    }
+  }
+
   getPromoEndDate() {
     const [day, month, year] = this.endPromotion.split('.');
-    return new Date(`20${year}-${month}-${day}T23:59:59`).getTime();
+    return new Date(`${year}-${month}-${day}T23:59:59`).getTime();
+  }
+
+  getPromoStartDate() {
+    const [day, month, year] = this.startPromotion.split('.');
+    return new Date(`${year}-${month}-${day}T23:59:59`).getTime();
   }
 
   updateCountdown() {
     const now = new Date().getTime();
-    let promoEndDate = this.getPromoEndDate();
+    const promoEndDate = this.getPromoEndDate();
 
     if (now >= promoEndDate) {
-      promoEndDate = this.updatePromoEndDate();
+      this.updatePromoDate();
     }
 
     const timeLeft = promoEndDate - now;
@@ -40,8 +64,14 @@ export class Clock {
     this.secondsLeft.innerText = Math.floor((timeLeft % (1000 * 60)) / 1000);
   }
 
-  updatePromoEndDate() {
+  updatePromoDate() {
+    const newStartDate = new Date(this.getPromoStartDate() + 7 * 24 * 60 * 60 * 1000);
     const newEndDate = new Date(this.getPromoEndDate() + 14 * 24 * 60 * 60 * 1000);
-    return newEndDate.getTime();
+
+    this.startPromotionElement.textContent = newStartDate.toLocaleDateString();
+    this.endPromotionElement.textContent = newEndDate.toLocaleDateString();
+
+    this.startPromotion = newStartDate.toLocaleDateString();
+    this.endPromotion = newEndDate.toLocaleDateString();
   }
 }

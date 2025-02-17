@@ -27,11 +27,3 @@ export function sendError(error, message) {
   xht.open('GET', url);
   xht.send();
 }
-
-export function getNodeValue(id) {
-  const node = document.getElementById(id);
-  if (node) {
-    return node.textContent;
-  }
-  return '';
-}
