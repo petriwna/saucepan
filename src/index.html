@@ -108,9 +108,24 @@
         <p>* залишилось <span>18</span> шт по акції</p>
       </div>
       <div class="counter__clock-container">
-        <p class="counter__text">До кінця акції залишилось:</p>
+        <h4 class="counter__text counter__text ">До кінця акції залишилось:</h4>
         <div class="counter__clock clock">
-          
+          <div class="clock__container">
+            <p class="clock__number" id="days">02</p>
+            <p class="clock__text">днів</p>
+          </div>
+          <div class="clock__container">
+            <p class="clock__number" id="hours">12</p>
+            <p class="clock__text">годин</p>
+          </div>
+          <div class="clock__container">
+            <p class="clock__number" id="minutes">12</p>
+            <p class="clock__text">хвилин</p>
+          </div>
+          <div class="clock__container">
+            <p class="clock__number" id="seconds">12</p>
+            <p class="clock__text">секунд</p>
+          </div>
         </div>
       </div>
     </section>
@@ -189,7 +204,7 @@
     <!--TODO find place this div-->
     <div class="features__marquee-container marquee-container">
       <div class="marquee-container__marquee">
-        АКЦІЯ ТРИВАЄ З 15.02 - 14.03
+        АКЦІЯ ТРИВАЄ З <span  id="js-date-start">15.02.25</span> - <span id="js-date-end">17.02.25</span>
       </div>
     </div>
 

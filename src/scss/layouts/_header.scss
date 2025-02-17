@@ -7,4 +7,9 @@
     font-weight: 700;
     text-transform: uppercase;
   }
+
+  &__made {
+    background-color: var(--color-secondary-brand);
+    color: var(--color-primary-white);
+  }
 }

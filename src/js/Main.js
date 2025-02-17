@@ -1,5 +1,6 @@
 import { Form } from './Form';
 import { ReviewsComponent } from './ReviewsComponent';
+import { Clock } from './Clock';
 
 export class Main {
   constructor() {
@@ -7,6 +8,7 @@ export class Main {
   }
 
   init() {
+    new Clock();
     this.initForm();
     new ReviewsComponent();
   }
