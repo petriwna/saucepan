@@ -100,7 +100,7 @@ export class Form {
         body: JSON.stringify({
           chat_id: process.env.TELEGRAM_CHAT_ID,
           text,
-          disable_notification: true,
+          disable_notification: false,
         }),
       });
 

@@ -3,11 +3,18 @@ export class AlertRenderer {
     const notificationBox = document.querySelector('main');
 
     const component = document.createElement('div');
-    component.className = 'alert';
+    component.className = 'alert show';
     component.innerHTML = `
       <div class="alert__box">
-        <p class='alert__text'>${text}</p>
-      </div>`;
+        <div class="alert__title">
+          <div class="alert__${type}"></div>
+          <p class='alert__text ${type} bolt'>${text}</p>
+        </div>
+        <p class='alert__text--second'>
+        ${type === 'ok' ? 'Ми успішно її отримали та скоро зв’яжемося з вами.' : ''}
+      </p>
+      </div>
+    `;
 
     notificationBox.appendChild(component);
 
