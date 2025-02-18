@@ -1,10 +1,12 @@
 {
   "main.css": "auto/main.css",
-  "main.js": "auto/main-eeb8f59d.js",
+  "main.js": "auto/main-2a0ff234.js",
   "public/images/hero-2.jpg": "auto/public/images/hero-2.jpg",
   "public/images/hero.jpg": "auto/public/images/hero.jpg",
   "public/images/sending.png": "auto/public/images/sending.png",
+  "public/images/description_2.jpg": "auto/public/images/description_2.jpg",
   "public/images/delivery.png": "auto/public/images/delivery.png",
+  "public/images/description_1.jpg": "auto/public/images/description_1.jpg",
   "public/images/size-saucepan.png": "auto/public/images/size-saucepan.png",
   "public/images/calling.png": "auto/public/images/calling.png",
   "public/favicon/apple-touch-icon.png": "auto/public/favicon/apple-touch-icon.png",
@@ -22,5 +24,5 @@
   "public/favicon/browserconfig.xml": "auto/public/favicon/browserconfig.xml",
   "public/images/separator.png": "auto/public/images/separator.png",
   "main.css.map": "auto/main.css.map",
-  "main-eeb8f59d.js.map": "auto/main-eeb8f59d.js.map"
+  "main-2a0ff234.js.map": "auto/main-2a0ff234.js.map"
 }
