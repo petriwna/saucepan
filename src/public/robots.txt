@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://saucepan-did-mazaj.web.app/sitemap.xml

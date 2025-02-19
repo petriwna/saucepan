@@ -192,12 +192,20 @@ module.exports = {
       patterns: [
         { from: resolveSrc('public/images'), to: 'public/images' },
         { from: resolveSrc('public/favicon'), to: 'public/favicon' },
+        { from: resolveSrc('public/robots.txt'), to: 'robots.txt' },
+        { from: resolveSrc('public/sitemap.xml'), to: 'sitemap.xml' },
+        { from: resolveSrc('public/videos'), to: 'public/videos' },
       ],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
-      minify: true,
+      minify: {
+        collapseWhitespace: false,
+        removeComments: false,
+        removeRedundantAttributes: false,
+        useShortDoctype: false,
+      },
       inject: 'body',
     }),
     new WebpackManifestPlugin(),

@@ -75,6 +75,14 @@
   border-right: 2px solid #ebebeb;
 }
 
+.allocated {
+  font-weight: 700;
+  padding: 0 3px;
+  color: var(--color-primary-light);
+  border-radius: 2px;
+  background-color: var(--color-brand-dark);
+}
+
 .bolt {
   font-weight: 800;
 }
