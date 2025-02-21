@@ -14,7 +14,7 @@
     "generate": "node generate-sitemap.js"
   },
   "dependencies": {
-    "cross-env": "7.0.3",
+    "cross-env": "^7.0.3",
     "del": "6.1.1",
     "sass": "1.69.5",
     "swiper": "^11.2.4"
