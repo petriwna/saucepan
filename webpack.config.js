@@ -190,16 +190,27 @@ module.exports = {
     !isDevMode && new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: resolveSrc('public/images'), to: 'public/images' },
-        { from: resolveSrc('public/favicon'), to: 'public/favicon' },
+        { from: resolveSrc('public/images'), to: 'images' },
+        { from: resolveSrc('public/favicon'), to: 'favicon' },
         { from: resolveSrc('public/robots.txt'), to: 'robots.txt' },
         { from: resolveSrc('public/sitemap.xml'), to: 'sitemap.xml' },
-        { from: resolveSrc('public/videos'), to: 'public/videos' },
+        { from: resolveSrc('public/videos'), to: 'videos' },
       ],
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
+      minify: {
+        collapseWhitespace: false,
+        removeComments: false,
+        removeRedundantAttributes: false,
+        useShortDoctype: false,
+      },
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/thank-you.html',
+      filename: 'thank-you.html',
       minify: {
         collapseWhitespace: false,
         removeComments: false,
