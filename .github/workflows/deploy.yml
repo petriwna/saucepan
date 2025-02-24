@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/my-app:latest
-            docker stop my-app || true
-            docker rm my-app || true
-            docker run -d --name my-app -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/my-app:latest
+            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
+            docker stop saucepan-did-mazaj || true
+            docker rm saucepan-did-mazaj || true
+            docker run -d --name saucepan-did-mazaj -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
