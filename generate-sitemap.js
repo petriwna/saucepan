@@ -3,7 +3,7 @@ const { resolve } = require('path');
 
 const { SitemapStream, streamToPromise } = require('sitemap');
 
-const domain = 'https://saucepan-did-mazaj.web.app/';
+const domain = 'https://saucepan.pp.ua/';
 const pages = [
   {
     url: '/',
