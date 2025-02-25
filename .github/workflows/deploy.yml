@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
-            sudo docker stop saucepan-did-mazaj || true
-            sudo docker rm saucepan-did-mazaj || true
-            sudo docker run -d --name saucepan-did-mazaj -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
+            docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
+            docker stop saucepan-did-mazaj || true
+            docker rm saucepan-did-mazaj || true
+            docker run -d --name saucepan-did-mazaj -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
