@@ -31,6 +31,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            chmod 666 /var/run/docker.sock
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/saucepan-did-mazaj:latest
             docker stop saucepan-did-mazaj || true
             docker rm saucepan-did-mazaj || true
